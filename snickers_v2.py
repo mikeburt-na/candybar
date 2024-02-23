@@ -20,7 +20,7 @@ class TimePassedApp:
         days_passed = time_passed.days
         hours_passed = time_passed.seconds // 3600
 
-        time_passed_str = f"{days_passed} days and {hours_passed} hours have passed since {start_date.strftime('%Y-%m-%d %H:%M:%S')}"
+        time_passed_str = days_passed +  " days and " +  hours_passed + " hours have passed since " + start_date.strftime('%Y-%m-%d %H:%M:%S')
         self.label.config(text=time_passed_str)
 
         self.master.after(3600000, self.update_time_passed)  # Update every hour (3600000 milliseconds)
