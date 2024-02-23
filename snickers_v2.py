@@ -26,6 +26,7 @@ class TimePassedApp:
         #time_passed_str = days_passed
         time_passed_str = years_passed_int
         self.label.config(text=time_passed_str)
+        self.label.config(text=time_passed)
 
         self.master.after(60000, self.update_time_passed)  # Update every hour (3600000 milliseconds)
 
