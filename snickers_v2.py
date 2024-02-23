@@ -1,33 +1,33 @@
 import tkinter as tk
-from datetime import datetime, timedelta
+from datetime import datetime
 
-class DateTimeApp:
+class TimePassedApp:
     def __init__(self, master):
         self.master = master
-        self.master.title("Date and Time Display")
+        self.master.title("Time Passed Since a Certain Date")
 
-        self.current_time_label = tk.Label(master, font=('Helvetica', 24))
-        self.current_time_label.pack(pady=20)
+        self.label = tk.Label(master, font=('Helvetica', 18))
+        self.label.pack(pady=20)
 
-        self.upcoming_time_label = tk.Label(master, font=('Helvetica', 18))
-        self.upcoming_time_label.pack(pady=10)
+        self.update_time_passed()
 
-        self.update_time()
+    def update_time_passed(self):
+        # Date to compare against (Change this to your desired date)
+        start_date = datetime(2023, 1, 1, 12, 0, 0)
+        current_date = datetime.now()
 
-    def update_time(self):
-        current_time = datetime.now()
-        current_time_str = current_time.strftime('%Y-%m-%d %H:%M:%S')
-        self.current_time_label.config(text=f"Current Time: {current_time_str}")
+        time_passed = current_date - start_date
+        days_passed = time_passed.days
+        hours_passed = time_passed.seconds // 3600
 
-        upcoming_time = datetime(2024, 3, 1, 12, 0, 0)  # Change this to your desired upcoming date and time
-        time_delta = upcoming_time - current_time
-        self.upcoming_time_label.config(text=f"Time until {upcoming_time.strftime('%Y-%m-%d %H:%M:%S')}: {time_delta}")
+        time_passed_str = f"{days_passed} days and {hours_passed} hours have passed since {start_date.strftime('%Y-%m-%d %H:%M:%S')}"
+        self.label.config(text=time_passed_str)
 
-        self.master.after(1000, self.update_time)  # Update every second
+        self.master.after(3600000, self.update_time_passed)  # Update every hour (3600000 milliseconds)
 
 def main():
     root = tk.Tk()
-    app = DateTimeApp(root)
+    app = TimePassedApp(root)
     root.mainloop()
 
 if __name__ == "__main__":
