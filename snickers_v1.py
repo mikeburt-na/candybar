@@ -11,7 +11,8 @@ def count_up_from_date(start_date_str, interval_seconds=1):
     # Start counting
     current_date = start_date
     while True:
-        print(current_date.strftime('%Y-%m-%d %H:%M:%S'))
+        #print(current_date.strftime('%Y-%m-%d %H:%M:%S'))
+
         current_date += interval
 
 root = Tk()
@@ -29,10 +30,21 @@ payday.pack(pady=20, ipadx=10, ipady=10)
 butterfinger = "2001-02-23 00:00:00"
 snickers = "2003-06-21 00:00:00"
 
-reeses = count_up_from_date(butterfinger)
+#reeses = count_up_from_date(butterfinger)
 
+interval_seconds = 1
 
-milkyway = Label(root, text=reeses, font=("Helvetica", 42), bg="black", fg="white")
-milkyway.pack(pady=20, ipadx=10, ipady=10)
+start_date = datetime.strptime(butterfinger, '%Y-%m-%d %H:%M:%S')
+interval = timedelta(seconds=interval_seconds)
+current_date = start_date
+while True:
+    kitkat = current_date.strftime('%Y-%m-%d %H:%M:%S')
+    milkyway = Label(root, text=kitkat, font=("Helvetica", 42), bg="black", fg="white")
+    milkyway.pack(pady=20, ipadx=10, ipady=10)
+    current_date += interval
+    root.mainloop()
 
-root.mainloop()
+#milkyway = Label(root, text=reeses, font=("Helvetica", 42), bg="black", fg="white")
+#milkyway.pack(pady=20, ipadx=10, ipady=10)
+
+#root.mainloop()
