@@ -30,7 +30,7 @@ class TimePassedApp:
         days_passed = time_passed.days
         hours_passed = time_passed.seconds // 3600
         years_passed = time_passed.days // 364.25
-        years_passed_int = "Years Since we Fell Asleep On the Couch ".format(int(years_passed))
+        years_passed_int = "{} Years Since we Fell Asleep On the Couch ".format(int(years_passed))
 
         self.years_label.config(text=years_passed_int)
         self.time_label.config(text=time_passed)
