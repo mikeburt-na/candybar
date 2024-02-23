@@ -20,7 +20,7 @@ class TimePassedApp:
         days_passed = time_passed.days
         hours_passed = time_passed.seconds // 3600
         years_passed = time_passed.days // 364.25
-        years_passed_int = years_passed(int)
+        years_passed_int = int(years_passed)
 
         #time_passed_str = days_passed +  " days and " +  hours_passed + " hours have passed since " + start_date.strftime('%Y-%m-%d %H:%M:%S')
         #time_passed_str = days_passed
