@@ -1,12 +1,12 @@
-import tkinter as tk
-from datetime import datetime
+from tkinter import *
+from datetime import datetime, timedelta
 
 class TimePassedApp:
     def __init__(self, master):
         self.master = master
         self.master.title("Time Passed Since a Certain Date")
 
-        self.label = tk.Label(master, font=('Helvetica', 18))
+        self.label = Label(master, font=('Helvetica', 18))
         self.label.pack(pady=20)
 
         self.update_time_passed()
@@ -26,10 +26,18 @@ class TimePassedApp:
         time_passed_str = years_passed
         self.label.config(text=time_passed_str)
 
-        self.master.after(3600000, self.update_time_passed)  # Update every hour (3600000 milliseconds)
+        self.master.after(60000, self.update_time_passed)  # Update every hour (3600000 milliseconds)
 
 def main():
-    root = tk.Tk()
+    root = Tk()
+    root.title('Mike and Bonnie - Anniversaries Timer')
+    root.attributes("-fullscreen", True)
+
+    twix = Label(root, text="Mikey and Bonnie", font=("Helvetica", 42), bg="black", fg="white")
+    twix.pack(pady=20, ipadx=10, ipady=10)
+
+    payday = Label(root, text="Anniversaries Timer", font=("Helvetica", 42), bg="black", fg="white")
+    payday.pack(pady=20, ipadx=10, ipady=10)
     app = TimePassedApp(root)
     root.mainloop()
 
