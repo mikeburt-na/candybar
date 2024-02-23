@@ -26,10 +26,13 @@ twix.pack(pady=20, ipadx=10, ipady=10)
 payday = Label(root, text="Anniversaries Timer", font=("Helvetica", 42), bg="black", fg="white")
 payday.pack(pady=20, ipadx=10, ipady=10)
 
-butterfinger = "2001-02-23"
-snickers = "2003-06-21"
+butterfinger = "2001-02-23 00:00:00"
+snickers = "2003-06-21 00:00:00"
+
 reeses = count_up_from_date(butterfinger)
 
+
 milkyway = Label(root, text=reeses, font=("Helvetica", 42), bg="black", fg="white")
+milkyway.pack(pady=20, ipadx=10, ipady=10)
 
 root.mainloop()
