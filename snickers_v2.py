@@ -13,7 +13,7 @@ class TimePassedApp:
 
     def update_time_passed(self):
         # Date to compare against (Change this to your desired date)
-        start_date = datetime(2023, 1, 1, 12, 0, 0)
+        start_date = datetime(2001, 2, 23, 0, 0, 0)
         current_date = datetime.now()
 
         time_passed = current_date - start_date
