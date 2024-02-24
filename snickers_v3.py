@@ -10,7 +10,7 @@ class TableApp:
         # Create labels for headers
         headers = ['Name', 'Age', 'Occupation']
         for col, header in enumerate(headers):
-            label = Label(master, text=header, relief=tk.RIDGE, width=15)
+            label = Label(master, text=header, relief=RIDGE, width=15)
             label.grid(row=0, column=col)
 
         # Sample data for the table
@@ -23,7 +23,7 @@ class TableApp:
         # Display data in the table
         for row, row_data in enumerate(data, start=1):
             for col, cell_data in enumerate(row_data):
-                label = Label(master, text=str(cell_data), relief=tk.RIDGE, width=15)
+                label = Label(master, text=str(cell_data), relief=RIDGE, width=15)
                 label.grid(row=row, column=col)
 
 def main():
