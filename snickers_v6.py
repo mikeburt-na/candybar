@@ -4,6 +4,7 @@ class TwoTablesApp:
     def __init__(self, master):
         self.master = master
         self.master.title("Two Tables")
+        self.master.attributes("-fullscreen", True)
 
         # Create frame for the first table
         self.frame_table1 = tk.Frame(master)
