@@ -59,10 +59,10 @@ class FullScreenApp:
         years_passed = time_passed.days // 365.25
         years_passed_int = "{} Years Since we Fell Asleep On the Couch ".format(int(years_passed))
 
-        self.years_label.config(text=years_passed_int)
-        self.days_label.config(text=days_passed)
-        self.hours_label.config(text=hours_passed)
-        self.seconds_label.config(text=seconds_passed)
+        #self.years_label.config(text=years_passed_int)
+        #self.days_label.config(text=days_passed)
+        #self.hours_label.config(text=hours_passed)
+        #self.seconds_label.config(text=seconds_passed)
         #self.time_label.config(text=time_passed)
 
         self.master.after(1000, self.update_time_passed)  # Update every hour (3600000 milliseconds)
