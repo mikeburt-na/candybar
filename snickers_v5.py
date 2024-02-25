@@ -28,7 +28,7 @@ class TableApp:
 
     def create_table_two_columns(self):
         table_frame = Frame(self.master)
-        table_frame.grid(row=0, column=1, sticky=NSEW)
+        table_frame.grid(row=1, column=1, sticky=NSEW)
         self.master.columnconfigure(1, weight=1)  # Set column weight to 1 for resizing
 
         label1 = Label(table_frame, text="Two Column Table - Column 1", font=('Helvetica', 16))
