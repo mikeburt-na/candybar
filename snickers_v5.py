@@ -27,7 +27,7 @@ class FullScreenApp:
         #label1 = Label(self.frame_table1, text="One Column Table", font=('Helvetica', 16))
         #label1.pack(fill=BOTH, expand=True)
 
-        self.twix = Label(self.frame_table1, text="------------------ Our Anniversaries ------------------", font=("Comic Sans MS", 32), bg="black", fg="white")
+        self.twix = Label(self.frame_table1, text="------------ Our Anniversaries ------------", font=("Comic Sans MS", 32), bg="black", fg="white")
         #self.twix.pack(fill=BOTH, expand=True)
         self.twix.grid(row=0, column=0, sticky="nsew")
 
@@ -35,10 +35,10 @@ class FullScreenApp:
 
     def create_table_two_columns(self):
         label1 = Label(self.frame_table2, text="Two Column Table - Column 1", font=('Helvetica', 16), bg="black", fg="white")
-        label1.grid(row=0, column=0, sticky="nsew")
+        label1.grid(row=1, column=0, sticky="nsew")
         
         label2 = Label(self.frame_table2, text="Two Column Table - Column 2", font=('Helvetica', 16), bg="black", fg="white")
-        label2.grid(row=0, column=1, sticky="nsew")
+        label2.grid(row=1, column=1, sticky="nsew")
 
         # Add more labels or widgets for your two-column table as needed
 
