@@ -26,7 +26,7 @@ class FullScreenApp:
         #label1.pack(fill=BOTH, expand=True)
 
         self.twix = Label(self.frame_table1, text="Mikey and Bonnie", font=("Helvetica", 42), bg="black", fg="white")
-        self.twix.pack(pady=10, ipadx=10, ipady=10)
+        self.twix.pack(fill=BOTH, expand=True)
 
         # Add more labels or widgets for your one-column table as needed
 
