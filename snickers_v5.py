@@ -54,11 +54,14 @@ class FullScreenApp:
         label6 = Label(self.frame_table2, text="--------------------------------------------------", font=('Helvetica', 16), bg="black", fg="white")
         label6.grid(row=3, column=1, sticky="nsew")
 
+        label7 = Label(self.frame_table2, font=('Helvetica', 16), bg="black", fg="white")
+        label7.grid(row=4, column=0, sticky="nsew")
+
         # Add more labels or widgets for your two-column table as needed
 
     def update_time_passed(self):
         # Date to compare against (Change this to your desired date)
-        start_date = datetime(2001, 2, 24, 0, 0, 0)
+        start_date = datetime(2001, 2, 23, 0, 0, 0)
         current_date = datetime.now()
 
         time_passed = current_date - start_date
@@ -66,9 +69,9 @@ class FullScreenApp:
         hours_passed = time_passed.seconds // 3600
         seconds_passed = time_passed.seconds
         years_passed = time_passed.days // 365.25
-        years_passed_int = "{} Years Since we Fell Asleep On the Couch ".format(int(years_passed))
+        years_passed_int = "{} Years As of {}".format(int(years_passed),current_date)
 
-        #self.years_label.config(text=years_passed_int)
+        self.label7.config(text=years_passed_int)
         #self.days_label.config(text=days_passed)
         #self.hours_label.config(text=hours_passed)
         #self.seconds_label.config(text=seconds_passed)
