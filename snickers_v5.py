@@ -23,6 +23,8 @@ class FullScreenApp:
         self.create_table_one_column()
         self.create_table_two_columns()
 
+        self.update_time_passed()
+
     def create_table_one_column(self):
         #label1 = Label(self.frame_table1, text="One Column Table", font=('Helvetica', 16))
         #label1.pack(fill=BOTH, expand=True)
@@ -34,13 +36,36 @@ class FullScreenApp:
         # Add more labels or widgets for your one-column table as needed
 
     def create_table_two_columns(self):
-        label1 = Label(self.frame_table2, text="Two Column Table - Column 1", font=('Helvetica', 16), bg="black", fg="white")
-        label1.grid(row=1, column=0, sticky="nsew")
+        label1 = Label(self.frame_table2, text="When it all started :)", font=('Helvetica', 16), bg="black", fg="white")
+        label1.grid(row=1, column=0, sticky="CENTER")
+
+        label2 = Label(self.frame_table2, text="February 23rd 2001", font=('Helvetica', 16), bg="black", fg="white")
+        label2.grid(row=2, column=0, sticky="CENTER")
         
-        label2 = Label(self.frame_table2, text="Two Column Table - Column 2", font=('Helvetica', 16), bg="black", fg="white")
-        label2.grid(row=1, column=1, sticky="nsew")
+        label3 = Label(self.frame_table2, text="Two Column Table - Column 2", font=('Helvetica', 16), bg="black", fg="white")
+        label3.grid(row=1, column=1, sticky="CENTER")
 
         # Add more labels or widgets for your two-column table as needed
+
+    def update_time_passed(self):
+        # Date to compare against (Change this to your desired date)
+        start_date = datetime(2001, 2, 24, 0, 0, 0)
+        current_date = datetime.now()
+
+        time_passed = current_date - start_date
+        days_passed = time_passed.days
+        hours_passed = time_passed.seconds // 3600
+        seconds_passed = time_passed.seconds
+        years_passed = time_passed.days // 365.25
+        years_passed_int = "{} Years Since we Fell Asleep On the Couch ".format(int(years_passed))
+
+        self.years_label.config(text=years_passed_int)
+        self.days_label.config(text=days_passed)
+        self.hours_label.config(text=hours_passed)
+        self.seconds_label.config(text=seconds_passed)
+        #self.time_label.config(text=time_passed)
+
+        self.master.after(1000, self.update_time_passed)  # Update every hour (3600000 milliseconds)
 
     def exit_fullscreen(self, event):
         self.master.attributes('-fullscreen', False)  # Exit fullscreen mode
