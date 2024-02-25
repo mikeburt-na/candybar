@@ -63,7 +63,7 @@ class FullScreenApp:
         # Date to compare against (Change this to your desired date)
         start_date = datetime(2001, 2, 23, 0, 0, 0)
         current_date = datetime.now()
-        format_date = datetime.now("%Y-%m-%d")
+        format_date = datetime.now.strftime("%Y-%m-%d")
 
         time_passed = current_date - start_date
         days_passed = time_passed.days
