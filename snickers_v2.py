@@ -9,10 +9,10 @@ class TimePassedApp:
 
 #   Header - Static Label
         self.twix = Label(master, text="Mikey and Bonnie", font=("Helvetica", 42), bg="black", fg="white")
-        #self.twix.pack(pady=10, ipadx=10, ipady=10)
+        self.twix.pack(pady=10, ipadx=10, ipady=10)
 
         self.payday = Label(master, text="Anniversaries Timer", font=("Helvetica", 42), bg="black", fg="white")
-        #self.payday.pack(pady=10, ipadx=10, ipady=10)
+        self.payday.pack(pady=10, ipadx=10, ipady=10)
 
 #   Dynamic Values
         #self.years_label = Label(master, font=('Helvetica', 22))
