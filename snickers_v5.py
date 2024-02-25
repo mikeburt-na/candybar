@@ -63,13 +63,14 @@ class FullScreenApp:
         # Date to compare against (Change this to your desired date)
         start_date = datetime(2001, 2, 23, 0, 0, 0)
         current_date = datetime.now()
+        format_date = datetime.now("%Y-%m-%d")
 
         time_passed = current_date - start_date
         days_passed = time_passed.days
         hours_passed = time_passed.seconds // 3600
         seconds_passed = time_passed.seconds
         years_passed = time_passed.days // 365.25
-        years_passed_int = "{} Years As of {}".format(int(years_passed),current_date)
+        years_passed_int = "{} Years As of {}".format(int(years_passed),format_date)
 
         self.label7.config(text=years_passed_int)
         #self.days_label.config(text=days_passed)
