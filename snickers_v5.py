@@ -57,22 +57,32 @@ class FullScreenApp:
         self.label7 = Label(self.frame_table2, font=('Helvetica', 16), bg="black", fg="white")
         self.label7.grid(row=4, column=0, sticky="nsew")
 
+        self.label8 = Label(self.frame_table2, font=('Helvetica', 16), bg="black", fg="white")
+        self.label8.grid(row=5, column=0, sticky="nsew")
+
         # Add more labels or widgets for your two-column table as needed
 
     def update_time_passed(self):
         # Date to compare against (Change this to your desired date)
         start_date = datetime(2001, 2, 23, 0, 0, 0)
         current_date = datetime.now()
+        current_year = current_date.year
         format_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
 
         time_passed = current_date - start_date
+        dating_next_ann = datetime((current_year + 1), 2, 23, 0, 0, 0)
+        dating_delta = current_date - dating_next_ann
         days_passed = time_passed.days
         hours_passed = time_passed.seconds // 3600
         seconds_passed = time_passed.seconds
         years_passed = time_passed.days // 365.25
         years_passed_int = "{} Years As of {}".format(int(years_passed),format_date)
+        dating_next_year = dating_delta.days
+        dating_next_year_str = "{} More Days Until Our Dating Anniversary".format(int(dating_next_year))
+
 
         self.label7.config(text=years_passed_int)
+        self.label8.config(text=dating_next_year_str)
         #self.days_label.config(text=days_passed)
         #self.hours_label.config(text=hours_passed)
         #self.seconds_label.config(text=seconds_passed)
