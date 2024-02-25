@@ -46,7 +46,7 @@ class FullScreenApp:
         label3.grid(row=1, column=1, sticky="nsew")
 
         label4 = Label(self.frame_table2, text="June 21st 2003", font=('Helvetica', 16), bg="black", fg="white")
-        label4.grid(row=1, column=1, sticky="nsew")
+        label4.grid(row=2, column=1, sticky="nsew")
 
         # Add more labels or widgets for your two-column table as needed
 
