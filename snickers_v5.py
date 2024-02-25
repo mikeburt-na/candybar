@@ -14,6 +14,8 @@ class FullScreenApp:
         self.frame_table2.grid(row=1, column=0, sticky="nsew")
 
         # Configure grid weights to make both columns equally stretchable
+        self.master.rowconfigure(0, weight=1)
+        self.master.rowconfigure(1, weight=1)
         self.master.columnconfigure(0, weight=1)
         self.master.columnconfigure(1, weight=1)
 
