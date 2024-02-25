@@ -10,7 +10,7 @@ class FullScreenApp:
         self.frame_table1 = tk.Frame(self.master, bg="lightblue")
         self.frame_table1.grid(row=0, column=0, sticky="nsew")
         self.frame_table2 = tk.Frame(self.master, bg="lightgreen")
-        self.frame_table2.grid(row=1, column=1, sticky="nsew")
+        self.frame_table2.grid(row=1, column=0, sticky="nsew")
 
         # Configure grid weights to make both columns equally stretchable
         self.master.columnconfigure(0, weight=1)
