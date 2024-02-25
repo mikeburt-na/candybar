@@ -37,13 +37,13 @@ class FullScreenApp:
 
     def create_table_two_columns(self):
         label1 = Label(self.frame_table2, text="When it all started :)", font=('Helvetica', 16), bg="black", fg="white")
-        label1.grid(row=1, column=0, sticky="CENTER")
+        label1.grid(row=1, column=0, sticky="nsew", justify="CENTER")
 
         label2 = Label(self.frame_table2, text="February 23rd 2001", font=('Helvetica', 16), bg="black", fg="white")
-        label2.grid(row=2, column=0, sticky="CENTER")
+        label2.grid(row=2, column=0, sticky="nsew")
         
         label3 = Label(self.frame_table2, text="Two Column Table - Column 2", font=('Helvetica', 16), bg="black", fg="white")
-        label3.grid(row=1, column=1, sticky="CENTER")
+        label3.grid(row=1, column=1, sticky="nsew")
 
         # Add more labels or widgets for your two-column table as needed
 
