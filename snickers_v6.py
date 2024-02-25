@@ -1,46 +1,46 @@
 import tkinter as tk
 
-class FullScreenApp:
+class TwoTablesApp:
     def __init__(self, master):
         self.master = master
-        self.master.attributes('-fullscreen', True)  # Set fullscreen mode
-        self.master.bind('<Escape>', self.exit_fullscreen)  # Bind Escape key to exit fullscreen
+        self.master.title("Two Tables")
 
-        # Create frames for each table
-        self.frame_table1 = tk.Frame(self.master, bg="lightblue")
+        # Create frame for the first table
+        self.frame_table1 = tk.Frame(master)
         self.frame_table1.grid(row=0, column=0, sticky="nsew")
-        self.frame_table2 = tk.Frame(self.master, bg="lightgreen")
+
+        # Create frame for the second table
+        self.frame_table2 = tk.Frame(master)
         self.frame_table2.grid(row=1, column=0, sticky="nsew")
 
-        # Configure grid weights to make both columns equally stretchable
-        self.master.columnconfigure(0, weight=1)
-        self.master.columnconfigure(1, weight=1)
+        # Configure grid weights to make both rows equally stretchable
+        self.master.rowconfigure(0, weight=1)
+        self.master.rowconfigure(1, weight=1)
 
-        # Create tables
+        # Create widgets for the first table
         self.create_table_one_column()
+
+        # Create widgets for the second table
         self.create_table_two_columns()
 
     def create_table_one_column(self):
-        label1 = tk.Label(self.frame_table1, text="One Column Table", font=('Helvetica', 16))
-        label1.pack(fill=tk.BOTH, expand=True)
+        label1 = tk.Label(self.frame_table1, text="Table 1 - One Column", font=('Helvetica', 16))
+        label1.pack()
 
         # Add more labels or widgets for your one-column table as needed
 
     def create_table_two_columns(self):
-        label1 = tk.Label(self.frame_table2, text="Two Column Table - Column 1", font=('Helvetica', 16))
-        label1.grid(row=0, column=0, sticky="nsew")
-        
-        label2 = tk.Label(self.frame_table2, text="Two Column Table - Column 2", font=('Helvetica', 16))
-        label2.grid(row=0, column=1, sticky="nsew")
+        label1 = tk.Label(self.frame_table2, text="Table 2 - Column 1", font=('Helvetica', 16))
+        label1.grid(row=0, column=0)
+
+        label2 = tk.Label(self.frame_table2, text="Table 2 - Column 2", font=('Helvetica', 16))
+        label2.grid(row=0, column=1)
 
         # Add more labels or widgets for your two-column table as needed
 
-    def exit_fullscreen(self, event):
-        self.master.attributes('-fullscreen', False)  # Exit fullscreen mode
-
 def main():
     root = tk.Tk()
-    app = FullScreenApp(root)
+    app = TwoTablesApp(root)
     root.mainloop()
 
 if __name__ == "__main__":
