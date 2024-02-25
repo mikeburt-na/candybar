@@ -15,8 +15,8 @@ class TwoTablesApp:
         self.frame_table2.grid(row=1, column=0, sticky="nsew")
 
         # Configure grid weights to make both rows equally stretchable
-        #self.master.rowconfigure(0, weight=1)
-        #self.master.rowconfigure(1, weight=1)
+        self.master.rowconfigure(0, weight=1)
+        self.master.rowconfigure(1, weight=1)
         self.master.columnconfigure(0, weight=1)
         self.master.columnconfigure(1, weight=1)
 
@@ -27,7 +27,7 @@ class TwoTablesApp:
         self.create_table_two_columns()
 
     def create_table_one_column(self):
-        label1 = tk.Label(self.frame_table1, text="Table 1 - One Column", font=('Helvetica', 16))
+        label1 = tk.Label(self.frame_table1, text="Table 1 - One Column Table 1 - One Column Table 1 - One Column Table 1 - One Column Table 1 - One Column", font=('Helvetica', 16))
         label1.pack()
 
         # Add more labels or widgets for your one-column table as needed
