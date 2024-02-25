@@ -7,11 +7,11 @@ class TwoTablesApp:
         self.master.attributes("-fullscreen", True)
 
         # Create frame for the first table
-        self.frame_table1 = tk.Frame(master)
+        self.frame_table1 = tk.Frame(master, bg="lightgreen")
         self.frame_table1.grid(row=0, column=0, sticky="nsew")
 
         # Create frame for the second table
-        self.frame_table2 = tk.Frame(master)
+        self.frame_table2 = tk.Frame(master, bg="green")
         self.frame_table2.grid(row=1, column=0, sticky="nsew")
 
         # Configure grid weights to make both rows equally stretchable
