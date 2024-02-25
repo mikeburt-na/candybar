@@ -27,9 +27,9 @@ class FullScreenApp:
         #label1 = Label(self.frame_table1, text="One Column Table", font=('Helvetica', 16))
         #label1.pack(fill=BOTH, expand=True)
 
-        self.twix = Label(self.frame_table1, text="------------ Our Anniversaries ------------", font=("Comic Sans MS", 32), bg="black", fg="white")
-        #self.twix.pack(fill=BOTH, expand=True)
-        self.twix.grid(row=0, column=0, sticky="nsew")
+        self.twix = Label(self.frame_table1, text="------------- Our Anniversaries ------------", font=("Comic Sans MS", 32), bg="black", fg="white")
+        self.twix.pack(fill=BOTH, expand=True)
+        #self.twix.grid(row=0, column=0, sticky="nsew")
 
         # Add more labels or widgets for your one-column table as needed
 
