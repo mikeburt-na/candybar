@@ -17,7 +17,7 @@ class TwoTablesApp:
         # Configure grid weights to make both rows equally stretchable
         self.master.rowconfigure(0, weight=1)
         self.master.rowconfigure(1, weight=1)
-        self.master.columnconfigure(0, weight=0)
+        self.master.columnconfigure(0, weight=1)
         self.master.columnconfigure(1, weight=1)
 
         # Create widgets for the first table
