@@ -31,10 +31,10 @@ class TwoTablesApp:
         # Add more labels or widgets for your one-column table as needed
 
     def create_table_two_columns(self):
-        label1 = tk.Label(self.frame_table2, text="Table 2 - Column 1", font=('Helvetica', 16))
+        label1 = tk.Label(self.frame_table2, text="Table 2 - Column 1", font=('Helvetica', 16), bg="black", fg="white")
         label1.grid(row=0, column=0)
 
-        label2 = tk.Label(self.frame_table2, text="Table 2 - Column 2", font=('Helvetica', 16))
+        label2 = tk.Label(self.frame_table2, text="Table 2 - Column 2", font=('Helvetica', 16), bg="white", fg="black")
         label2.grid(row=0, column=1)
 
         # Add more labels or widgets for your two-column table as needed
