@@ -37,7 +37,7 @@ class FullScreenApp:
 
     def create_table_two_columns(self):
         label1 = Label(self.frame_table2, text="When it all started :)", font=('Helvetica', 16), bg="black", fg="white")
-        label1.grid(row=1, column=0, sticky="nsew", justify="CENTER")
+        label1.grid(row=1, column=0, sticky="nsew")
 
         label2 = Label(self.frame_table2, text="February 23rd 2001", font=('Helvetica', 16), bg="black", fg="white")
         label2.grid(row=2, column=0, sticky="nsew")
