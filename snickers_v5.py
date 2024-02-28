@@ -57,7 +57,7 @@ class FullScreenApp:
         self.label7 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
         self.label7.grid(row=4, column=0, sticky="nsew")
 
-        self.label71 = Label(self.frame_table2, text="-------------Next Dating Anniversary-------------", font=('Helvetica', 16), bg="black", fg="white")
+        self.label71 = Label(self.frame_table2, text="------------Next Dating Anniversary------------", font=('Helvetica', 16), bg="black", fg="white")
         self.label71.grid(row=5, column=0, sticky="nsew")
 
         self.label8 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
@@ -69,13 +69,16 @@ class FullScreenApp:
         self.label10 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
         self.label10.grid(row=8, column=0, sticky="nsew")
 
+        self.label12 = Label(self.frame_table2, text="-------------Count Down!!-------------", font=('Helvetica', 16), bg="black", fg="white")
+        self.label12.grid(row=5, column=0, sticky="nsew")
+
         self.label11 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
         self.label11.grid(row=9, column=0, sticky="nsew")
 
 
 
 
-        self.label711 = Label(self.frame_table2, text="-------------Next Wedding Anniversary-------------", font=('Helvetica', 16), bg="black", fg="white")
+        self.label711 = Label(self.frame_table2, text="------------Next Wedding Anniversary------------", font=('Helvetica', 16), bg="black", fg="white")
         self.label711.grid(row=5, column=1, sticky="nsew")
 
         # Add more labels or widgets for your two-column table as needed
@@ -100,10 +103,10 @@ class FullScreenApp:
         dating_next_year_hours_str = "{} More Hours".format(int(dating_next_year_hours))
         dating_next_year_min = dating_next_year_hours * 60
         dating_next_year_min_str = "{} More Minutes".format(int(dating_next_year_min))
-        #dating_next_year_sec = dating_next_year_min * 60
-        #dating_next_year_sec_str = "{} More Seconds".format(int(dating_next_year_sec))
-        dating_next_year_sec = dating_delta
-        dating_next_year_sec_str = "{} More Seconds".format(dating_next_year_sec)
+        dating_next_year_sec = dating_next_year_min * 60
+        dating_next_year_sec_str = "{} More Seconds".format(int(dating_next_year_sec))
+        dating_next_year_cd = dating_delta
+        dating_next_year_cd_str = "{}".format(dating_next_year_cd)
 
 
         self.label7.config(text=dating_years_passed_int)
@@ -111,6 +114,7 @@ class FullScreenApp:
         self.label9.config(text=dating_next_year_hours_str)
         self.label10.config(text=dating_next_year_min_str)
         self.label11.config(text=dating_next_year_sec_str)
+        self.label12.config(text=dating_next_year_cd_str)
         #self.days_label.config(text=days_passed)
         #self.hours_label.config(text=hours_passed)
         #self.seconds_label.config(text=seconds_passed)
