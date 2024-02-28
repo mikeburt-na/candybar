@@ -57,7 +57,7 @@ class FullScreenApp:
         self.label7 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
         self.label7.grid(row=4, column=0, sticky="nsew")
 
-        self.label71 = Label(self.frame_table2, text="------------Next Dating Anniversary------------", font=('Helvetica', 16), bg="black", fg="white")
+        self.label71 = Label(self.frame_table2, text="-----------Next Dating Anniversary-----------", font=('Helvetica', 16), bg="black", fg="white")
         self.label71.grid(row=5, column=0, sticky="nsew")
 
         self.label8 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
@@ -82,7 +82,7 @@ class FullScreenApp:
         self.label711 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
         self.label711.grid(row=4, column=1, sticky="nsew")
 
-        self.label7115 = Label(self.frame_table2, text="------------Next Wedding Anniversary------------", font=('Helvetica', 16), bg="black", fg="white")
+        self.label7115 = Label(self.frame_table2, text="-----------Next Wedding Anniversary-----------", font=('Helvetica', 16), bg="black", fg="white")
         self.label7115.grid(row=5, column=1, sticky="nsew")
 
         self.label712 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
