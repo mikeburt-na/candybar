@@ -84,6 +84,24 @@ class FullScreenApp:
         self.label711 = Label(self.frame_table2, text="------------Next Wedding Anniversary------------", font=('Helvetica', 16), bg="black", fg="white")
         self.label711.grid(row=5, column=1, sticky="nsew")
 
+        self.label712 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
+        self.label712.grid(row=6, column=1, sticky="nsew")
+
+        self.label713 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
+        self.label713.grid(row=7, column=1, sticky="nsew")
+
+        self.label713 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
+        self.label713.grid(row=8, column=1, sticky="nsew")
+
+        self.label714 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
+        self.label714.grid(row=9, column=1, sticky="nsew")
+
+        self.label715 = Label(self.frame_table2, text="-------------Count Down!!-------------", font=('Helvetica', 16), bg="black", fg="white")
+        self.label715.grid(row=10, column=1, sticky="nsew")
+
+        self.label716 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
+        self.label716.grid(row=11, column=1, sticky="nsew")
+
         # Add more labels or widgets for your two-column table as needed
 
     def update_time_passed(self):
@@ -93,6 +111,7 @@ class FullScreenApp:
         format_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
         # Dating Information
         dating_date = datetime(2001, 2, 23, 0, 0, 0)
+        wed_date = datetime(2003, 6, 21, 0, 0, 0)
         # Dating Current
         dating_time_passed = current_date - dating_date
         dating_years_passed = dating_time_passed.days // 365.25
@@ -111,6 +130,25 @@ class FullScreenApp:
         dating_next_year_cd = dating_delta
         dating_next_year_cd_str = "{}".format(dating_next_year_cd)
 
+        # Dating Current
+        wed_time_passed = current_date - wed_date
+        wed_years_passed = wed_time_passed.days // 365.25
+        wed_years_passed_int = "{} Years As of {}".format(int(wed_years_passed),format_date)
+
+        # Wedding Future
+        wed_next_ann = datetime((current_year + 1), 2, 23, 0, 0, 0)
+        wed_delta = wed_next_ann - current_date
+        wed_next_year_days = wed_delta.days
+        wed_next_year_days_str = "{} More Days".format(int(wed_next_year_days))
+        wed_next_year_hours = wed_next_year_days * 24
+        wed_next_year_hours_str = "{} More Hours".format(int(wed_next_year_hours))
+        wed_next_year_min = wed_next_year_hours * 60
+        wed_next_year_min_str = "{} More Minutes".format(int(wed_next_year_min))
+        wed_next_year_sec = wed_next_year_min * 60
+        wed_next_year_sec_str = "{} More Seconds".format(int(wed_next_year_sec))
+        wed_next_year_cd = wed_delta
+        wed_next_year_cd_str = "{}".format(wed_next_year_cd)
+
 
         self.label7.config(text=dating_years_passed_int)
         self.label8.config(text=dating_next_year_days_str)
@@ -118,6 +156,13 @@ class FullScreenApp:
         self.label10.config(text=dating_next_year_min_str)
         self.label11.config(text=dating_next_year_sec_str)
         self.label12.config(text=dating_next_year_cd_str)
+
+        self.label711.config(text=wed_years_passed_int)
+        self.label712.config(text=wed_next_year_days_str)
+        self.label713.config(text=wed_next_year_hours_str)
+        self.label714.config(text=wed_next_year_min_str)
+        self.label715.config(text=wed_next_year_sec_str)
+        self.label716.config(text=wed_next_year_cd_str)
         #self.days_label.config(text=days_passed)
         #self.hours_label.config(text=hours_passed)
         #self.seconds_label.config(text=seconds_passed)
