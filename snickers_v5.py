@@ -141,9 +141,9 @@ class FullScreenApp:
 
         # Wedding Future
         if current_year == current_year:
-            wed_next_ann = datetime(current_year, 2, 23, 0, 0, 0)
+            wed_next_ann = datetime(current_year, 6, 21, 0, 0, 0)
         else:
-            wed_next_ann = datetime((current_year + 1), 2, 23, 0, 0, 0)
+            wed_next_ann = datetime((current_year + 1), 6, 21, 0, 0, 0)
         wed_delta = wed_next_ann - current_date
         wed_next_year_days = wed_delta.days
         wed_next_year_days_str = "{} More Days".format(int(wed_next_year_days))
