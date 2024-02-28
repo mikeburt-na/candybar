@@ -64,7 +64,13 @@ class FullScreenApp:
         self.label8.grid(row=6, column=0, sticky="nsew")
 
         self.label9 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
-        self.label9.grid(row=6, column=0, sticky="nsew")
+        self.label9.grid(row=7, column=0, sticky="nsew")
+
+        self.label10 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
+        self.label10.grid(row=8, column=0, sticky="nsew")
+
+        self.label11 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
+        self.label11.grid(row=9, column=0, sticky="nsew")
 
 
 
@@ -92,11 +98,17 @@ class FullScreenApp:
         dating_next_year_days_str = "{} More Days".format(int(dating_next_year_days))
         dating_next_year_hours = dating_next_year_days * 24
         dating_next_year_hours_str = "{} More Hours".format(int(dating_next_year_hours))
+        dating_next_year_min = dating_next_year_hours * 60
+        dating_next_year_min_str = "{} More Minutes".format(int(dating_next_year_min))
+        dating_next_year_sec = dating_next_year_min * 60
+        dating_next_year_sec_str = "{} More Seconds".format(int(dating_next_year_sec))
 
 
         self.label7.config(text=dating_years_passed_int)
         self.label8.config(text=dating_next_year_days_str)
         self.label9.config(text=dating_next_year_hours_str)
+        self.label10.config(text=dating_next_year_min_str)
+        self.label11.config(text=dating_next_year_sec_str)
         #self.days_label.config(text=days_passed)
         #self.hours_label.config(text=hours_passed)
         #self.seconds_label.config(text=seconds_passed)
