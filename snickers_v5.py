@@ -54,7 +54,7 @@ class FullScreenApp:
         self.label6 = Label(self.frame_table2, text="--------------------------------------------------", font=('Helvetica', 16), bg="black", fg="white")
         self.label6.grid(row=3, column=1, sticky="nsew")
 
-        self.label7 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
+        self.label7 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="blue")
         self.label7.grid(row=4, column=0, sticky="nsew")
 
         self.label71 = Label(self.frame_table2, text="-----------Next Dating Anniversary-----------", font=('Helvetica', 16), bg="black", fg="white")
@@ -75,11 +75,11 @@ class FullScreenApp:
         self.label122 = Label(self.frame_table2, text="-------------Count Down!!-------------", font=('Helvetica', 16), bg="black", fg="white")
         self.label122.grid(row=10, column=0, sticky="nsew")
 
-        self.label12 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
+        self.label12 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="red")
         self.label12.grid(row=11, column=0, sticky="nsew")
 
 
-        self.label711 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
+        self.label711 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="blue")
         self.label711.grid(row=4, column=1, sticky="nsew")
 
         self.label7115 = Label(self.frame_table2, text="-----------Next Wedding Anniversary-----------", font=('Helvetica', 16), bg="black", fg="white")
@@ -100,7 +100,7 @@ class FullScreenApp:
         self.label7155 = Label(self.frame_table2, text="-------------Count Down!!-------------", font=('Helvetica', 16), bg="black", fg="white")
         self.label7155.grid(row=10, column=1, sticky="nsew")
 
-        self.label716 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
+        self.label716 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="red")
         self.label716.grid(row=11, column=1, sticky="nsew")
 
         # Add more labels or widgets for your two-column table as needed
