@@ -36,52 +36,60 @@ class FullScreenApp:
         # Add more labels or widgets for your one-column table as needed
 
     def create_table_two_columns(self):
-        label1 = Label(self.frame_table2, text="--------------- When it all started    --------------", font=('Helvetica', 16), bg="black", fg="white")
-        label1.grid(row=1, column=0, sticky="nsew")
+        self.label1 = Label(self.frame_table2, text="--------------- When it all started    --------------", font=('Helvetica', 16), bg="black", fg="white")
+        self.label1.grid(row=1, column=0, sticky="nsew")
 
-        label2 = Label(self.frame_table2, text="February 23rd 2001", font=('Helvetica', 16), bg="black", fg="white")
-        label2.grid(row=2, column=0, sticky="nsew")
+        self.label2 = Label(self.frame_table2, text="February 23rd 2001", font=('Helvetica', 16), bg="black", fg="white")
+        self.label2.grid(row=2, column=0, sticky="nsew")
         
-        label3 = Label(self.frame_table2, text="-------------- We made it legal    ---------------", font=('Helvetica', 16), bg="black", fg="white")
-        label3.grid(row=1, column=1, sticky="nsew")
+        self.label3 = Label(self.frame_table2, text="-------------- We made it legal    ---------------", font=('Helvetica', 16), bg="black", fg="white")
+        self.label3.grid(row=1, column=1, sticky="nsew")
 
-        label4 = Label(self.frame_table2, text="June 21st 2003", font=('Helvetica', 16), bg="black", fg="white")
-        label4.grid(row=2, column=1, sticky="nsew")
+        self.label4 = Label(self.frame_table2, text="June 21st 2003", font=('Helvetica', 16), bg="black", fg="white")
+        self.label4.grid(row=2, column=1, sticky="nsew")
 
-        label5 = Label(self.frame_table2, text="--------------------------------------------------", font=('Helvetica', 16), bg="black", fg="white")
-        label5.grid(row=3, column=0, sticky="nsew")
+        self.label5 = Label(self.frame_table2, text="--------------------------------------------------", font=('Helvetica', 16), bg="black", fg="white")
+        self.label5.grid(row=3, column=0, sticky="nsew")
 
-        label6 = Label(self.frame_table2, text="--------------------------------------------------", font=('Helvetica', 16), bg="black", fg="white")
-        label6.grid(row=3, column=1, sticky="nsew")
+        self.label6 = Label(self.frame_table2, text="--------------------------------------------------", font=('Helvetica', 16), bg="black", fg="white")
+        self.label6.grid(row=3, column=1, sticky="nsew")
 
         self.label7 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
         self.label7.grid(row=4, column=0, sticky="nsew")
 
+        self.label71 = Label(self.frame_table2, text="-------------Next Dating Anniversary-------------", font=('Helvetica', 16), bg="black", fg="white")
+        self.label71.grid(row=5, column=0, sticky="nsew")
+
         self.label8 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
-        self.label8.grid(row=5, column=0, sticky="nsew")
+        self.label8.grid(row=6, column=0, sticky="nsew")
+
+
+
+
+        self.label711 = Label(self.frame_table2, text="-------------Next Wedding Anniversary-------------", font=('Helvetica', 16), bg="black", fg="white")
+        self.label711.grid(row=5, column=1, sticky="nsew")
 
         # Add more labels or widgets for your two-column table as needed
 
     def update_time_passed(self):
-        # Date to compare against (Change this to your desired date)
-        start_date = datetime(2001, 2, 23, 0, 0, 0)
+        # Header
         current_date = datetime.now()
         current_year = current_date.year
         format_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
-
-        time_passed = current_date - start_date
+        # Dating Information
+        dating_date = datetime(2001, 2, 23, 0, 0, 0)
+        # Dating Current
+        dating_time_passed = current_date - dating_date
+        dating_years_passed = dating_time_passed.days // 365.25
+        dating_years_passed_int = "{} Years As of {}".format(int(dating_years_passed),format_date)
+        # Dating Future
         dating_next_ann = datetime((current_year + 1), 2, 23, 0, 0, 0)
-        dating_delta = current_date - dating_next_ann
-        days_passed = time_passed.days
-        hours_passed = time_passed.seconds // 3600
-        seconds_passed = time_passed.seconds
-        years_passed = time_passed.days // 365.25
-        years_passed_int = "{} Years As of {}".format(int(years_passed),format_date)
-        dating_next_year = dating_delta.days
-        dating_next_year_str = "{} More Days Until Our Dating Anniversary".format(int(dating_next_year))
+        dating_delta = dating_next_ann - current_date
+        dating_next_year_days = dating_delta.days
+        dating_next_year_str = "{} More Days Until Our Dating Anniversary".format(int(dating_next_year_days))
 
 
-        self.label7.config(text=years_passed_int)
+        self.label7.config(text=dating_years_passed_int)
         self.label8.config(text=dating_next_year_str)
         #self.days_label.config(text=days_passed)
         #self.hours_label.config(text=hours_passed)
