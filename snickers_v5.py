@@ -63,6 +63,9 @@ class FullScreenApp:
         self.label8 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
         self.label8.grid(row=6, column=0, sticky="nsew")
 
+        self.label9 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
+        self.label9.grid(row=6, column=0, sticky="nsew")
+
 
 
 
@@ -86,11 +89,14 @@ class FullScreenApp:
         dating_next_ann = datetime((current_year + 1), 2, 23, 0, 0, 0)
         dating_delta = dating_next_ann - current_date
         dating_next_year_days = dating_delta.days
-        dating_next_year_str = "{} More Days Until Our Dating Anniversary".format(int(dating_next_year_days))
+        dating_next_year_days_str = "{} More Days".format(int(dating_next_year_days))
+        dating_next_year_hours = dating_next_year_days * 24
+        dating_next_year_hours_str = "{} More Hours".format(int(dating_next_year_hours))
 
 
         self.label7.config(text=dating_years_passed_int)
-        self.label8.config(text=dating_next_year_str)
+        self.label8.config(text=dating_next_year_days_str)
+        self.label9.config(text=dating_next_year_hours_str)
         #self.days_label.config(text=days_passed)
         #self.hours_label.config(text=hours_passed)
         #self.seconds_label.config(text=seconds_passed)
