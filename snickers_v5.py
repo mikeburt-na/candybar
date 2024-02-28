@@ -36,13 +36,13 @@ class FullScreenApp:
         # Add more labels or widgets for your one-column table as needed
 
     def create_table_two_columns(self):
-        self.label1 = Label(self.frame_table2, text="--------------- When it all started --------------", font=('Helvetica', 16), bg="black", fg="white")
+        self.label1 = Label(self.frame_table2, text="--------------- When it all Started --------------", font=('Helvetica', 16), bg="black", fg="white")
         self.label1.grid(row=1, column=0, sticky="nsew")
 
         self.label2 = Label(self.frame_table2, text="February 23rd 2001", font=('Helvetica', 16), bg="black", fg="white")
         self.label2.grid(row=2, column=0, sticky="nsew")
         
-        self.label3 = Label(self.frame_table2, text="-------------- We made it legal ---------------", font=('Helvetica', 16), bg="black", fg="white")
+        self.label3 = Label(self.frame_table2, text="-------------- We made it Legal ---------------", font=('Helvetica', 16), bg="black", fg="white")
         self.label3.grid(row=1, column=1, sticky="nsew")
 
         self.label4 = Label(self.frame_table2, text="June 21st 2003", font=('Helvetica', 16), bg="black", fg="white")
