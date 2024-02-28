@@ -118,11 +118,15 @@ class FullScreenApp:
         dating_years_passed = dating_time_passed.days // 365.25
         dating_years_passed_int = "{} Years As of {}".format(int(dating_years_passed),format_date)
         # Dating Future
-        if current_year == current_year:
+        #Check Year for accurate Delta
+        dating_next_ann_check = datetime((current_year + 1), 2, 23, 0, 0, 0)
+        dating_delta_check = dating_next_ann_check - current_date
+        if dating_delta_check.days >= 365:
             dating_next_ann = datetime(current_year, 2, 23, 0, 0, 0)
+            dating_delta = dating_next_ann - current_date
         else:
             dating_next_ann = datetime((current_year + 1), 2, 23, 0, 0, 0)
-        dating_delta = dating_next_ann - current_date
+            dating_delta = dating_next_ann - current_date
         dating_next_year_days = dating_delta.days
         dating_next_year_days_str = "{} More Days".format(int(dating_next_year_days))
         dating_next_year_hours = dating_next_year_days * 24
@@ -140,10 +144,7 @@ class FullScreenApp:
         wed_years_passed_int = "{} Years As of {}".format(int(wed_years_passed),format_date)
 
         # Wedding Future
-        if current_year == current_year:
-            wed_next_ann = datetime(current_year, 6, 21, 0, 0, 0)
-        else:
-            wed_next_ann = datetime((current_year + 1), 6, 21, 0, 0, 0)
+        wed_next_ann = datetime((current_year + 1), 6, 21, 0, 0, 0)
         wed_delta = wed_next_ann - current_date
         wed_next_year_days = wed_delta.days
         wed_next_year_days_str = "{} More Days".format(int(wed_next_year_days))
