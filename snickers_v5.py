@@ -100,8 +100,10 @@ class FullScreenApp:
         dating_next_year_hours_str = "{} More Hours".format(int(dating_next_year_hours))
         dating_next_year_min = dating_next_year_hours * 60
         dating_next_year_min_str = "{} More Minutes".format(int(dating_next_year_min))
-        dating_next_year_sec = dating_next_year_min * 60
-        dating_next_year_sec_str = "{} More Seconds".format(int(dating_next_year_sec))
+        #dating_next_year_sec = dating_next_year_min * 60
+        #dating_next_year_sec_str = "{} More Seconds".format(int(dating_next_year_sec))
+        dating_next_year_sec = dating_delta
+        dating_next_year_sec_str = "{} More Seconds".format(dating_next_year_sec)
 
 
         self.label7.config(text=dating_years_passed_int)
