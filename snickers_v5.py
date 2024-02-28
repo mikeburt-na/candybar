@@ -69,11 +69,14 @@ class FullScreenApp:
         self.label10 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
         self.label10.grid(row=8, column=0, sticky="nsew")
 
-        self.label12 = Label(self.frame_table2, text="-------------Count Down!!-------------", font=('Helvetica', 16), bg="black", fg="white")
-        self.label12.grid(row=5, column=0, sticky="nsew")
-
         self.label11 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
         self.label11.grid(row=9, column=0, sticky="nsew")
+
+        self.label122 = Label(self.frame_table2, text="-------------Count Down!!-------------", font=('Helvetica', 16), bg="black", fg="white")
+        self.label122.grid(row=10, column=0, sticky="nsew")
+
+        self.label12 = Label(self.frame_table2, font=('Helvetica', 14), bg="black", fg="white")
+        self.label12.grid(row=11, column=0, sticky="nsew")
 
 
 
